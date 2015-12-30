@@ -1,0 +1,29 @@
+ul{
+	list-style: none;
+}
+
+ul.numbersUl li {
+	float: left;
+	border: 1px solid #CED0CF;
+	padding: 5px;
+	margin-left: 13px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px #000;
+	width: 30px;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+ul.numbersUl li:hover {
+	font-size: 25px;
+	width: 50px;
+}
+
+ol li {
+	font-size: 12px;
+	font-weight: bolder;
+}
+

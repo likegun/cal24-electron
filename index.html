@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="App">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>Let's calculate 24!</title>
+        <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body ng-controller="AdminCtrl">
+        <div class="container">
+            <h1>Let's calculate 24!</h1>
+            <button ng-click="newGame()">新游戏</button>
+            <button ng-click="showAnswer = true">查看答案</button>
+            <div>
+                <h3>Game Number:</h3>
+                <ul class="numbersUl">
+                    <li ng-repeat="value in cal24.gameNumArr track by $index" ng-bind="value">
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div  ng-show="showAnswer">
+                <h3>The Answers:</h3>
+                <ul class="resultsUl">
+                    <li ng-repeat="value in cal24.results track by $index">
+                        <h4>第{{$index+1}}种解法:</h4>
+                        <ol>
+                            <li ng-repeat="step in value" ng-bind="step">
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <script src="framework/angular.min.js"></script>
+        <script src="scripts/App.js"></script>
+        <script src="scripts/Cal24Ctrl.js"></script>
+    </body>
+</html>
